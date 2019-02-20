@@ -31,8 +31,7 @@ app.get('/weather', getWeather);
 // Yelp food review route
 
 // Meetup route
-
-app.get('/meetup', getMeetup);
+app.get('/meetups', getMeetup);
 
 // MovieDB route
 
@@ -67,10 +66,10 @@ function Weather(day) {
 // Constructs the Meetup object
 // TODO:
 function Meetup(meetup) {
-    this.link = meetup.results.events[0].link;
-    this.name = meetup.results.events[0].name;
-    this.host = meetup.results.events[0].group.name;
-    this.creation_date = new CreateDay;
+  this.link = meetup.link;
+  this.name = meetup.name;
+  this.host = meetup.group.name;
+  this.creation_date = new Date(meetup.created).toString().slice(0, 15);
 }
 
 // Geocode Lookup Handler
@@ -99,11 +98,20 @@ function getWeather(request, response) {
     .catch(error => handleError(error, response));
 }
 
-// TODO:
 // Meetup Route Handler
-function getMeetup() {
+function getMeetup(request, response) {
+  const url = `https://api.meetup.com/find/upcoming_events?&sign=true&photo-host=public&key=${process.env.MEETUP_API_KEY}&lon=${request.query.data.longitude}&lat=${request.query.data.latitude}`
+  console.log('url', url);
+  superagent.get(url)
+    .then(result => {
+      const meetupSummaries = result.body.events.map(meetup => {
+        const event = new Meetup(meetup);
+        return event;
+      });
 
-  // Code goes here...
+      response.send(meetupSummaries);
+    })
+    .catch(error => handleError(error, response))
 }
 
 //Error handler
