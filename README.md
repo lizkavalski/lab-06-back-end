@@ -57,7 +57,7 @@ Estimate of time needed to complete: 45 mins
 
 Start time: 10:40 am
 
-Finish time: 11:10 pm
+Finish time: 11:10 am
 
 Actual time needed to complete: 30 minutes
 ```
@@ -67,19 +67,19 @@ Number and name of feature: 3. Weather
 
 Estimate of time needed to complete: 30 min
 
-Start time: 11:12 pm
+Start time: 11:12 am
 
-Finish time: _____
+Finish time: 12:00pm_
 
-Actual time needed to complete: _____
+Actual time needed to complete: ___43 mins__
 <!-- most of the time was used for testing and handling any errors for it -->
 ```
 ```
 Number and name of feature: 4. meetup
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: __1 hour__
 
-Start time: _____
+Start time: ___12:05__
 
 Finish time: _____
 

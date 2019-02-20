@@ -32,8 +32,7 @@ app.get('/weather', getWeather);
 
 // Meetup route
 
-// TODO:
-// put a meetups route here
+app.get('/meetup', getMeetup);
 
 // MovieDB route
 
@@ -67,9 +66,12 @@ function Weather(day) {
 
 // Constructs the Meetup object
 // TODO:
-// function Meetup() {
-  //  Code goes here...
-// }
+function Meetup() {
+    this.link = 0;
+    this.name =0;
+    this.host=0;
+    this.creation_date=0;
+}
 
 // Geocode Lookup Handler
 function searchtoLatLong(query) {
@@ -99,9 +101,10 @@ function getWeather(request, response) {
 
 // TODO:
 // Meetup Route Handler
-// function getMeetup() {
+function getMeetup() {
+
   // Code goes here...
-// }
+}
 
 //Error handler
 function handleError(err, res) {
