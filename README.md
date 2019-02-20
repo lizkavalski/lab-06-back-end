@@ -27,7 +27,7 @@ This application is written in JavaScript and uses Node.js for server-side funct
 
 02-20-2019 10:35 am- Data has been reformatted for the API.
 
-2-20-2019 
+2-20-2019 12:00om- Able to veiw map location and weather base on user info. 
 
 <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
 
@@ -81,7 +81,7 @@ Estimate of time needed to complete: __1 hour__
 
 Start time: ___12:05__
 
-Finish time: _____
+Finish time: NOT DONE
 
 Actual time needed to complete: _____
 ```

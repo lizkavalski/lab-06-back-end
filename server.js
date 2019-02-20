@@ -53,7 +53,7 @@ app.listen(PORT, () => console.log(`Listening on ${PORT}`));
 function Location(query, res) {
   console.log('res in Location()', res);
   this.search_query = query;
-  this.formatted_query = res.body.results[0].formatted_address;
+  this.formattedj_query = res.body.results[0].formatted_address;
   this.latitude = res.body.results[0].geometry.location.lat;
   this.longitude = res.body.results[0].geometry.location.lng;
 }
@@ -66,11 +66,11 @@ function Weather(day) {
 
 // Constructs the Meetup object
 // TODO:
-function Meetup() {
-    this.link = 0;
-    this.name =0;
-    this.host=0;
-    this.creation_date=0;
+function Meetup(meetup) {
+    this.link = meetup.results.events[0].link;
+    this.name = meetup.results.events[0].name;
+    this.host = meetup.results.events[0].group.name;
+    this.creation_date = new CreateDay;
 }
 
 // Geocode Lookup Handler
