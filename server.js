@@ -73,7 +73,7 @@ function Weather(day) {
 
 // Geocode Lookup Handler
 function searchtoLatLong(query) {
-  const url = `https:maps.googleapis.com/maps/api/geocode/json?address=${query}&key=&${process.env.GOECODE_API_KEY}`;
+  const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${query}&key=${process.env.GOECODE_API_KEY}`;
 
   return superagent.get(url)
     .then(res => {
